@@ -149,5 +149,164 @@ Forever carrying on.</p></div></div></details></div></section>
 <section id="participate" class="participate"><div class="container"><div class="section-head center"><div class="smallcaps">Take Part</div><h2>Join Lincolns People Party</h2><p>If you believe America's future should be built around people—not simply power—there is a place for you here.</p></div><div class="cards"><div class="card"><div class="icon">🤝</div><h3>Join</h3><p>Learn about the movement and how people can participate.</p></div><div class="card"><div class="icon">🛠️</div><h3>Volunteer</h3><p>Help with the archive, technology, creative work and community projects.</p></div><div class="card"><div class="icon">💡</div><h3>Build</h3><p>Help turn Book of Help concepts into useful applications.</p></div><div class="card"><div class="icon">❤️</div><h3>Support</h3><p>Support the work transparently and learn how contributions are used.</p></div></div></div></section>
 <section class="quotes"><div class="container"><div class="section-head center"><div class="smallcaps">Words That Endured</div><h2>Lincoln's Voice</h2></div><div class="quote-grid"><div class="quote"><blockquote>“A house divided against itself cannot stand.”</blockquote><cite>Abraham Lincoln</cite></div><div class="quote"><blockquote>“With malice toward none; with charity for all…”</blockquote><cite>Abraham Lincoln</cite></div><div class="quote"><blockquote>“Government of the people, by the people, for the people…”</blockquote><cite>Gettysburg Address</cite></div></div></div></section>
 <section class="final"><div class="container"><div class="smallcaps">The Journey Continues</div><h2>One Human<br><span class="gold">Family</span></h2><p>Choose Compassion.</p><div style="margin-top:28px"><a class="btn primary" href="#top">Return to the Beginning ↑</a></div></div></section>
-</main><footer><div class="container footer-inner"><div><strong style="color:#fff">LINCOLNS PEOPLE PARTY</strong><br><span>Freedom • Equality • Opportunity • Human Dignity</span></div><div><a href="#archive">Archive</a> • <a href="#lincoln">Lincoln</a> • <a href="#help">Book of Help</a> • <a href="#participate">Participate</a></div><div>America 1776 — 2026</div></div></footer><script>(function(){const archiveImages=[/images/archive-trump-1776-2026.jpeg,"/images/1947.png","/images/Advaith.png","/images/CM-CBNaiduGaru.png","/images/DrAmbedkar.png","/images/Gandhiji.png","/images/greecepm2.png","/images/MasterDevaansh.png","/images/my-mother-balamani.png","/images/pm-narendramodiji.png","/images/President-Trump_2024-2026.png","/images/President-xijinping-01.png","/images/primeminister-israel-netanayu.png","/images/Rafael_Aman_thai_telugu_eng.png","/images/saudiPrince.png","/images/SNO-123-final.png","/images/SNO-124e.png","/images/SNO-132e.png","/images/SNO-133e.png","/images/SNO-24o.png","/images/SNO-TRUMP-INT-134a.png","/images/SNO-TRUMP-INT-134b.png","/images/sno25b.png","/images/sno25Orig.png","/images/TedTurner-1.png","/images/TN-07-CM-2026-001.png","/images/Trump-1.png","/images/Trump-10.png","/images/TRUMP-11.png","/images/Trump-12.png","/images/Trump-13.png","/images/Trump-14.png","/images/Trump-15.png","/images/Trump-16.png","/images/Trump-17.png","/images/Trump-18.png","/images/Trump-19.png","/images/Trump-2.png","/images/Trump-20.png","/images/Trump-21.png","/images/Trump-22.png","/images/Trump-23.png","/images/Trump-3.png","/images/Trump-4.png","/images/Trump-5.png","/images/Trump-6.png","/images/Trump-7.png","/images/Trump-8.png","/images/Trump-9.png","/images/Trump-China-01.png","/images/Word-Smith-Shashi-Tharoor.png"];const track=document.getElementById('archiveTrack'),counter=document.getElementById('archiveCounter'),shuffleBtn=document.getElementById('shuffleArchive'),prev=document.querySelector('.carousel-arrow.prev'),next=document.querySelector('.carousel-arrow.next');let selected=[],position=0,timer;function sample(){const a=[...archiveImages.slice(1)];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return [archiveImages[0],...a.slice(0,4)]}return a.slice(0,5)}function visible(){return innerWidth<=520?2:innerWidth<=850?3:5}function update(){const v=visible(),max=Math.max(0,selected.length-v);position=Math.max(0,Math.min(position,max));track.style.transform=`translateX(-${(100/v)*position}%)`}function render(){track.innerHTML=selected.map((s,i)=>`<div class="carousel-slide"><img src="${s}" alt="${i===0 ? "Donald J. Trump Presidential Archive — 1776 to 2026" : "1776 archive image "+(i+1)}" loading="lazy"></div>`).join('');position=0;update();counter.textContent='5 archive images • randomly selected'}function shuffle(){selected=sample();render()}function reset(){clearInterval(timer);timer=setInterval(()=>{if(position>=Math.max(0,selected.length-visible()))shuffle();else{position++;update()}},5000)}prev.onclick=()=>{position--;update();reset()};next.onclick=()=>{position++;update();reset()};shuffleBtn.onclick=()=>{shuffle();reset()};addEventListener('resize',update);shuffle();reset()})();</script>
+</main><footer><div class="container footer-inner"><div><strong style="color:#fff">LINCOLNS PEOPLE PARTY</strong><br><span>Freedom • Equality • Opportunity • Human Dignity</span></div><div><a href="#archive">Archive</a> • <a href="#lincoln">Lincoln</a> • <a href="#help">Book of Help</a> • <a href="#participate">Participate</a></div><div>America 1776 — 2026</div></div></footer><script>
+(function () {
+  "use strict";
+
+  const archiveImages = [
+    "/images/archive-trump-1776-2026.jpeg",,
+    "/images/1947.png",,
+    "/images/Advaith.png",,
+    "/images/CM-CBNaiduGaru.png",,
+    "/images/DrAmbedkar.png",,
+    "/images/Gandhiji.png",,
+    "/images/greecepm2.png",,
+    "/images/MasterDevaansh.png",,
+    "/images/my-mother-balamani.png",,
+    "/images/pm-narendramodiji.png",,
+    "/images/President-Trump_2024-2026.png",,
+    "/images/President-xijinping-01.png",,
+    "/images/primeminister-israel-netanayu.png",,
+    "/images/Rafael_Aman_thai_telugu_eng.png",,
+    "/images/saudiPrince.png",,
+    "/images/SNO-123-final.png",,
+    "/images/SNO-124e.png",,
+    "/images/SNO-132e.png",,
+    "/images/SNO-133e.png",,
+    "/images/SNO-24o.png",,
+    "/images/SNO-TRUMP-INT-134a.png",,
+    "/images/SNO-TRUMP-INT-134b.png",,
+    "/images/sno25b.png",,
+    "/images/sno25Orig.png",,
+    "/images/TedTurner-1.png",,
+    "/images/TN-07-CM-2026-001.png",,
+    "/images/Trump-1.png",,
+    "/images/Trump-10.png",,
+    "/images/TRUMP-11.png",,
+    "/images/Trump-12.png",,
+    "/images/Trump-13.png",,
+    "/images/Trump-14.png",,
+    "/images/Trump-15.png",,
+    "/images/Trump-16.png",,
+    "/images/Trump-17.png",,
+    "/images/Trump-18.png",,
+    "/images/Trump-19.png",,
+    "/images/Trump-2.png",,
+    "/images/Trump-20.png",,
+    "/images/Trump-21.png",,
+    "/images/Trump-22.png",,
+    "/images/Trump-23.png",,
+    "/images/Trump-3.png",,
+    "/images/Trump-4.png",,
+    "/images/Trump-5.png",,
+    "/images/Trump-6.png",,
+    "/images/Trump-7.png",,
+    "/images/Trump-8.png",,
+    "/images/Trump-9.png",,
+    "/images/Trump-China-01.png",,
+    "/images/Word-Smith-Shashi-Tharoor.png"
+  ];
+
+  const track = document.getElementById("archiveTrack");
+  const counter = document.getElementById("archiveCounter");
+  const shuffleButton = document.getElementById("shuffleArchive");
+  const previousButton = document.querySelector(".carousel-arrow.prev");
+  const nextButton = document.querySelector(".carousel-arrow.next");
+
+  if (!track || !counter || !shuffleButton || !previousButton || !nextButton) return;
+
+  let selected = [];
+  let position = 0;
+  let timer = null;
+
+  function getRandomFive() {
+    const pool = archiveImages.slice(1);
+
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+
+    // Image #1 is ALWAYS the permanent archive cover.
+    return [archiveImages[0], ...pool.slice(0, 4)];
+  }
+
+  function visibleCount() {
+    if (window.innerWidth <= 520) return 2;
+    if (window.innerWidth <= 850) return 3;
+    return 5;
+  }
+
+  function updatePosition() {
+    const visible = visibleCount();
+    const maxPosition = Math.max(0, selected.length - visible);
+    position = Math.max(0, Math.min(position, maxPosition));
+
+    // On desktop all five selected images fit, while mobile/tablet can slide.
+    const shift = (100 / visible) * position;
+    track.style.transform = "translateX(-" + shift + "%)";
+  }
+
+  function render() {
+    track.innerHTML = selected.map(function (src, index) {
+      const alt = index === 0
+        ? "Donald J. Trump Presidential Archive — 1776 to 2026"
+        : "1776 archive image " + (index + 1);
+
+      return '<div class="carousel-slide">' +
+             '<img src="' + src + '" alt="' + alt + '" loading="' +
+             (index < 2 ? "eager" : "lazy") + '">' +
+             '</div>';
+    }).join("");
+
+    position = 0;
+    updatePosition();
+    counter.textContent = "5 archive images • first image fixed";
+  }
+
+  function shuffle() {
+    selected = getRandomFive();
+    render();
+  }
+
+  function restartTimer() {
+    clearInterval(timer);
+
+    timer = setInterval(function () {
+      const visible = visibleCount();
+      const maxPosition = Math.max(0, selected.length - visible);
+
+      if (position >= maxPosition) {
+        // Keep the permanent first image and choose four new random images.
+        shuffle();
+      } else {
+        position++;
+        updatePosition();
+      }
+    }, 5000);
+  }
+
+  previousButton.addEventListener("click", function () {
+    position--;
+    updatePosition();
+    restartTimer();
+  });
+
+  nextButton.addEventListener("click", function () {
+    position++;
+    updatePosition();
+    restartTimer();
+  });
+
+  shuffleButton.addEventListener("click", function () {
+    shuffle();
+    restartTimer();
+  });
+
+  window.addEventListener("resize", updatePosition);
+
+  shuffle();
+  restartTimer();
+})();
+</script>
 </body></html>
