@@ -154,57 +154,57 @@ Forever carrying on.</p></div></div></details></div></section>
   "use strict";
 
   const archiveImages = [
-    "/images/archive-trump-1776-2026.jpeg",,
-    "/images/1947.png",,
-    "/images/Advaith.png",,
-    "/images/CM-CBNaiduGaru.png",,
-    "/images/DrAmbedkar.png",,
-    "/images/Gandhiji.png",,
-    "/images/greecepm2.png",,
-    "/images/MasterDevaansh.png",,
-    "/images/my-mother-balamani.png",,
-    "/images/pm-narendramodiji.png",,
-    "/images/President-Trump_2024-2026.png",,
-    "/images/President-xijinping-01.png",,
-    "/images/primeminister-israel-netanayu.png",,
-    "/images/Rafael_Aman_thai_telugu_eng.png",,
-    "/images/saudiPrince.png",,
-    "/images/SNO-123-final.png",,
-    "/images/SNO-124e.png",,
-    "/images/SNO-132e.png",,
-    "/images/SNO-133e.png",,
-    "/images/SNO-24o.png",,
-    "/images/SNO-TRUMP-INT-134a.png",,
-    "/images/SNO-TRUMP-INT-134b.png",,
-    "/images/sno25b.png",,
-    "/images/sno25Orig.png",,
-    "/images/TedTurner-1.png",,
-    "/images/TN-07-CM-2026-001.png",,
-    "/images/Trump-1.png",,
-    "/images/Trump-10.png",,
-    "/images/TRUMP-11.png",,
-    "/images/Trump-12.png",,
-    "/images/Trump-13.png",,
-    "/images/Trump-14.png",,
-    "/images/Trump-15.png",,
-    "/images/Trump-16.png",,
-    "/images/Trump-17.png",,
-    "/images/Trump-18.png",,
-    "/images/Trump-19.png",,
-    "/images/Trump-2.png",,
-    "/images/Trump-20.png",,
-    "/images/Trump-21.png",,
-    "/images/Trump-22.png",,
-    "/images/Trump-23.png",,
-    "/images/Trump-3.png",,
-    "/images/Trump-4.png",,
-    "/images/Trump-5.png",,
-    "/images/Trump-6.png",,
-    "/images/Trump-7.png",,
-    "/images/Trump-8.png",,
-    "/images/Trump-9.png",,
-    "/images/Trump-China-01.png",,
-    "/images/Word-Smith-Shashi-Tharoor.png"
+    "/images/thumbs/archive-trump-1776-2026.webp",,
+    "/images/thumbs/1947.webp",,
+    "/images/thumbs/Advaith.webp",,
+    "/images/thumbs/CM-CBNaiduGaru.webp",,
+    "/images/thumbs/DrAmbedkar.webp",,
+    "/images/thumbs/Gandhiji.webp",,
+    "/images/thumbs/greecepm2.webp",,
+    "/images/thumbs/MasterDevaansh.webp",,
+    "/images/thumbs/my-mother-balamani.webp",,
+    "/images/thumbs/pm-narendramodiji.webp",,
+    "/images/thumbs/President-Trump_2024-2026.webp",,
+    "/images/thumbs/President-xijinping-01.webp",,
+    "/images/thumbs/primeminister-israel-netanayu.webp",,
+    "/images/thumbs/Rafael_Aman_thai_telugu_eng.webp",,
+    "/images/thumbs/saudiPrince.webp",,
+    "/images/thumbs/SNO-123-final.webp",,
+    "/images/thumbs/SNO-124e.webp",,
+    "/images/thumbs/SNO-132e.webp",,
+    "/images/thumbs/SNO-133e.webp",,
+    "/images/thumbs/SNO-24o.webp",,
+    "/images/thumbs/SNO-TRUMP-INT-134a.webp",,
+    "/images/thumbs/SNO-TRUMP-INT-134b.webp",,
+    "/images/thumbs/sno25b.webp",,
+    "/images/thumbs/sno25Orig.webp",,
+    "/images/thumbs/TedTurner-1.webp",,
+    "/images/thumbs/TN-07-CM-2026-001.webp",,
+    "/images/thumbs/Trump-1.webp",,
+    "/images/thumbs/Trump-10.webp",,
+    "/images/thumbs/TRUMP-11.webp",,
+    "/images/thumbs/Trump-12.webp",,
+    "/images/thumbs/Trump-13.webp",,
+    "/images/thumbs/Trump-14.webp",,
+    "/images/thumbs/Trump-15.webp",,
+    "/images/thumbs/Trump-16.webp",,
+    "/images/thumbs/Trump-17.webp",,
+    "/images/thumbs/Trump-18.webp",,
+    "/images/thumbs/Trump-19.webp",,
+    "/images/thumbs/Trump-2.webp",,
+    "/images/thumbs/Trump-20.webp",,
+    "/images/thumbs/Trump-21.webp",,
+    "/images/thumbs/Trump-22.webp",,
+    "/images/thumbs/Trump-23.webp",,
+    "/images/thumbs/Trump-3.webp",,
+    "/images/thumbs/Trump-4.webp",,
+    "/images/thumbs/Trump-5.webp",,
+    "/images/thumbs/Trump-6.webp",,
+    "/images/thumbs/Trump-7.webp",,
+    "/images/thumbs/Trump-8.webp",,
+    "/images/thumbs/Trump-9.webp",,
+    "/images/thumbs/Trump-China-01.webp",,
+    "/images/thumbs/Word-Smith-Shashi-Tharoor.webp"
   ];
 
   const track = document.getElementById("archiveTrack");
@@ -253,9 +253,15 @@ Forever carrying on.</p></div></div></details></div></section>
         ? "Donald J. Trump Presidential Archive — 1776 to 2026"
         : "1776 archive image " + (index + 1);
 
+      const fileName = src.split("/").pop().replace(/\.webp$/i, "");
+      const originalExtension = fileName === "archive-trump-1776-2026" ? "jpeg" : "png";
+      const originalPath = "/images/" + fileName + "." + originalExtension;
+
       return '<div class="carousel-slide">' +
+             '<a href="' + originalPath + '" target="_blank" rel="noopener" title="Open full-size image">' +
              '<img src="' + src + '" alt="' + alt + '" loading="' +
              (index < 2 ? "eager" : "lazy") + '">' +
+             '</a>' +
              '</div>';
     }).join("");
 
